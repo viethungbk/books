@@ -64,7 +64,7 @@ Như ta đã biết, một giao dịch sẽ nhận đầu vào từ đầu ra c�
 
 Khi giao dịch được tạo, chỉ người có chữ ký của khóa tương ứng với địa chỉ đích thì mới được nhận coin và ví sẽ bị tính thêm một ít tiền phí giao dịch.
 
-#### Thêm giao dịch vỏa sổ cái (Ledger)
+#### Thêm giao dịch vào sổ cái (Ledger)
 
 
 
