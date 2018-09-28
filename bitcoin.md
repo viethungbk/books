@@ -77,7 +77,12 @@
 	- Việc đào tạo tin tưởng bằng cách đảm bảo rằng giao dịch chỉ được xác nhận nếu đủ năng lực tính toán dành cho khối chứa chúng. Càng nhiều khối thì càng tin cậy hơn.
 ###		4. Mining transactions in blocks
 - Thợ đào thêm những giao dịch chưa được xác xinh vào một chỗ gọi là "pool" tạm thời. Khi thợ đào thêm block mới, họ thêm các giao dịch đó vào block mới và cố gắng giải bài toán PoW
-- Khi giao dịch được thêm vào block, giao dịch có phí cao nhất sẽ được ưu tiên và có một số tiêu chí khác
+- Khi giao dịch được thêm vào block, giao dịch có phí cao nhất sẽ được ưu tiên và có một số tiêu chí khác. Mỗi thợ đào sẽ bắt đầu đào block mới ngay khi họ nhận được block trước đó từ mạng. Họ ngay lập tức tạo ra một block mới, thêm vào đó các giao dịch và mã hash của giao dịch trước, sau đó tính toán PoW cho block mới.
+- Mỗi thợ đào sẽ thêm vào block của họ một giao dịch đặc biệt là địa chỉ bitcoin của họ. Nếu họ giải được bài toán PoW, họ sẽ thêm được block vào blockchain là nhận được một phần thưởng là bitcoin vào địa chỉ bitcoin của họ.
+- Các block được nối tiếp nhau trong blockchain. Một block đứng trước một block khác được gọi là một "xác nhận" cho giao dịch đó. Theo quy ước, một block có hơn 6 khối được coi là không thể thay đổi vì nó đòi hỏi sự tính toán khổng lồ để vô hiệu hóa và tính lại 6 khối trước đó.
+### 	5. Spending the transaction
+- Khi một giao dịch được thêm vào blockchain, nó có thể thấy được bởi tất cả các apps bitcoin.
+- Tất cả khách hàng bitcoin có thể theo dõi nguốn coin từ thời điểm nó được tạo ra, từng giao dịch một, cho đến thời điểm hiên tại.
 # Chương 3: The Bitcoin Client
 
 # Chương 4: Keys, Addresses, Wallets
