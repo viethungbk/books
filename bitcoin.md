@@ -58,17 +58,26 @@
 
 #### Nhận đầu vào phù hợp (Getting right inputs)
 
-Như ta đã biết, một giao dịch sẽ nhận đầu vào từ đầu ra của giao dịch ngay trước đó, để có thể tạo một giao dịch mới, ví phải chứa đủ bitcoin từ một output unspent hoặc nó phải quét rồi tính tổng các unspent outputs nhỏ hơn để có được unspent output đủ cho giao dịch.
+- Như ta đã biết, một giao dịch sẽ nhận đầu vào từ đầu ra của giao dịch ngay trước đó, để có thể tạo một giao dịch mới, ví phải chứa đủ bitcoin từ một output unspent hoặc nó phải quét rồi tính tổng các unspent outputs nhỏ hơn để có được unspent output đủ cho giao dịch.
 
 #### Tạo đầu ra (Creating the outputs)
 
-Khi giao dịch được tạo, chỉ người có chữ ký của khóa tương ứng với địa chỉ đích thì mới được nhận coin và ví sẽ bị tính thêm một ít tiền phí giao dịch.
+- Khi giao dịch được tạo, chỉ người có chữ ký của khóa tương ứng với địa chỉ đích thì mới được nhận coin và ví sẽ bị tính thêm một ít tiền phí giao dịch.
 
 #### Thêm giao dịch vào sổ cái (Ledger)
 
-
-
-
+- Khi giao dịch gồm đủ tất cả những thông tin cần thiết, nó sẽ được đưa lên mạng. Mạng bitcoin là kết nối điểm điểm, mỗi bitcoin client tham gia bằng cách kết nối với các bitcoin client khác.
+- Ứng dụng ví sẽ gửi giao dịch mới đến một vài node mà nó kết nối đến qua Internet (không cần kết nối trực tiếp đến ví bitcoin của người nhận), các node đó lại ngay lập tức gửi tiếp đến các node khác mà nó kết nối đến -> do đó giao dịch nhanh chóng được truyền khắp mạng. 
+- Một quan niệm sai lầm về giao dịch bitcoin là họ phải đợi xác nhận 10 phút cho một block mới hoặc 60 phút cho 6 yêu cầu xác nhận. Khi các yêu cầu xác nhận này đã được gửi đi toàn bộ mạng thì sự delay này là không cần thiết với mặt hàng có giá trị thấp như một tách cafe. Người bán hàng có thể chấp nhận một giao dịch nhỏ không cần qua xác nhận.
+###		3. Đào bitcoin (Bitcoin mining)
+- Khi giao dịch đã được truyền trên toàn mạng, nó chưa nằm trong blockchain cho đến khi nó được xác nhận và thêm vào một block bằng cách "mining" - đào.
+- Các giao dịch được đóng gói vào các khối, cần tính toán rất khó để giải quyết bài toán chứng minh nhưng rất dễ dàng để thấy được kết quả tính toán đó đúng.
+- Quá trình đào có hai tác dụng: 
+	- Tạo ra bitcoin mới ở mỗi block, cũng như việc ngân hàng in tiền mới. Tổng số bitcoin tạo ra ở mỗi block không đổi và giảm dần theo thời gian.
+	- Việc đào tạo tin tưởng bằng cách đảm bảo rằng giao dịch chỉ được xác nhận nếu đủ năng lực tính toán dành cho khối chứa chúng. Càng nhiều khối thì càng tin cậy hơn.
+###		4. Mining transactions in blocks
+- Thợ đào thêm những giao dịch chưa được xác xinh vào một chỗ gọi là "pool" tạm thời. Khi thợ đào thêm block mới, họ thêm các giao dịch đó vào block mới và cố gắng giải bài toán PoW
+- Khi giao dịch được thêm vào block, giao dịch có phí cao nhất sẽ được ưu tiên và có một số tiêu chí khác
 # Chương 3: The Bitcoin Client
 
 # Chương 4: Keys, Addresses, Wallets
