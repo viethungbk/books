@@ -84,6 +84,10 @@
 - Khi một giao dịch được thêm vào blockchain, nó có thể thấy được bởi tất cả các apps bitcoin.
 - Tất cả khách hàng bitcoin có thể theo dõi nguốn coin từ thời điểm nó được tạo ra, từng giao dịch một, cho đến thời điểm hiên tại.
 # Chương 3: The Bitcoin Client
+## 1. Bitcoin core
+- Bitcoin core giữ một bản sao đầy đủ của blockchain , với các giao dịch từ khi bitcoin vận hành (2009). 
+## 2. Sử dụng JSON-RPC API của Bitcoin Core bằng command line
+## 3. Alternative clients, libraries and toolkits
 
 # Chương 4: Keys, Addresses, Wallets
 
