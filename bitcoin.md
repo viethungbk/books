@@ -90,6 +90,40 @@
 ## 3. Alternative clients, libraries and toolkits
 
 # Chương 4: Keys, Addresses, Wallets
+## 	1. Giới thiệu
+- Việc sở hữu bitcoin được hình thành qua khoá số, địa chỉ bitcoin và chữ ký số. 
+- Các khóa sô không được lưu trữ thực sự trong mạng mà nó được tạo ra và lưu trữ bởi người dùng cuối trong một file hoặc một cơ sở dữ liệu đơn giản gọi là ví.
+- Khóa ở ví của người dùng hoàn toàn độc lập với giao thức bitcoin và có thể được sinh ra và quản lý bởii phần mềm ví của người dùng mà không tham chiếu đến blockchain hay truy cập mạng.
+- Keys có tác dụng: tin tưởng phi tập trung, điều khiển và kiểm soát quyền sở hữu và mô hình bảo mật mã hóa.
+- Mỗi giao dịch cần phải có chữ ký hợp lệ để được thêm vào blockchain, nó có thể  sinh ra với khóa hợp lệ. Dó đó bất kỳ ai có có bản sao của khóa đó đều có quyền kiểm soát tài khoản bitcoin đó.
+- Keys bao gồm: 
+  - Public key (giống như số tài khoản ngân hàng)
+  - Private key (giống như mã PIN hay chữ ký ở tấm séc)
+- Người dùng hiếm khi nhìn thấy keys vì nó được lưu và quản lí trong phần mềm ví.
+- Trong phần thanh toán của người dùng bitcoin, public key của người nhận được biễu diễn bằng chữ ký số, gọi là địa chỉ bitcoin (giống như tiên của người nhận trên tấm séc). Trong hầu hết các trường hợp, bitcoin address được tạo ra và tương ứng với public key.
+### 	1. Mã hóa public key và tiền mã hóa
+- Bitcoin sử dụng phép nhân đường cong elip làm cơ sở cho mã hóa public key, do đó, nó không thể tính theo chiều ngược lại.
+- Bitcoin sử dụng mã hóa khóa công khai để tạo cặp khóa kiểm soát quyền truy cập vào bitcoin. Cặp khóa bao gồm: 
+	- Public key (duy nhất, tạo ra từ Public key) dùng để nhận bitcoin
+	- Private key dùng để ký các  giao dịch để sử dụng tiền bitcoin.
+- Private key có thể sử dụng để tạo chữ ký lên giao dịch, chữ ký này có thể dễ dàng xác thực bằng public key mà không cần tiết lộ khóa riêng.
+-  Mỗi khi tiêu bitcoin, họ phải đưa ra public key và chữ ký (mỗi lần là khác nhau nhưng được tạo từ cùng một private key), qua đó, mọi người trên mạng botcoin có thể xác minh và chấp nhận giao dịch đó là hợp lệ.
+-  Trong hầu hết các ví, private key và public key được lưu trữ như là một cặp cho thuận tiện, Tuy nhiên, public key có thể được tính toán từ private key, vì vậy, có thể chỉ lưu trữ private key là đủ
+### 	2. Private keys and public keys
+- Từ private key (k), sử dụng phép nhân đường cong elip - một hàm mã hóa một chiều để tạo ra một public key (K).
+
+- Từ public key, ta sử dụng hàm băm mật mã một chiều để tạo ra địa chi bitcoin (A)
+   *private key (k) -----eliptic curve multiplication---> public key (K) -------hashing funtion----> Bitcoin Address (A)*
+
+### 	3. Private keys
+- Private key là một số, thường được chọn ngẫu nhiên.
+
+
+
+
+
+
+
 
 # Chương 5: Các giao dịch
 
