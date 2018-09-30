@@ -117,6 +117,23 @@
 
 ### 	3. Private keys
 - Private key là một số, thường được chọn ngẫu nhiên.
+- Quyền sở hữu và kiểm soát private key là của người dùng root với tất cả các tiền liên quan đến địa chỉ bitcoin tương ứng.
+- Private key dùng để tạo ra chữ ký được yêu cầu khi chi tiêu bitcoin bằng cách chứng minh quyền sở hữu số tiền trong giao dịch.
+- Private key phải luôn được giữ kín vì nếu bên thứ 3 biết được, họ hoàn toàn có quyền kiểm soát tài khoản bitcoin đó.
+- Private key phải được sao lưu và bảo vệ khỏi những mất mát vì nếu bị mất nó thì không thể khôi phục và số tiền được bảo vệ bởi nó cũng mất vĩnh viễn.
+#### Tạo private key từ một số ngẫu nhiên
+- Việc đầu tiên quan trọng nhất để tạo keys là tìm một nguồn entropy an toàn hoặc ngẫu nhiên.
+- Về cơ bản việc tạo bitcoin key cũng giống việc chọn một số trong đoạn 1 đến (2 mũ 256) - 1, phương pháp chính xác để tạo ra số đó không quan trọng, miễn là nó không thể dự đoán và không lặp lại được.
+- Phần mềm của bitcoin sử dụng trình tạo số ngẫu nhiên của hệ điều hành để tạo ra 256 bit entropy. Về phương diện lập trình, ta có thể chọn một chuối lớn lấy từ nguồn mã hóa an toàn rồi dùng thuật toán băm SHA-256 tính kết quá, nếu kết quả nhỏ hơn n - 1 thì ta có một private key hợp lệ, nếu không thì ta có thể dễ dàng thử lại với một chuỗi ngẫu nhiên khác.
+###  	4. Public keys
+- Public key được tính từ private key qua phép nhân đường cong elip, thông thể tính ngược lại được: 
+  ​				**K = k * G**
+
+  ​	Trong đó: 
+  ​	- K: Public key
+  ​	- k: private key
+  ​	- G: điểm hằng số - Điểm phát (Generator point)
+### 	5. Địa chỉ bitcoin
 
 
 
